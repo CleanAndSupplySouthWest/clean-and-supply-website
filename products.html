@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Clean and Supply Southwest LTD</title>
+    <meta name="description" content="Browse our complete catalog of professional cleaning products and chemicals with transparent pricing.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
+                    Clean and Supply Southwest LTD
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-medium text-primary">Products</a>
+                    <a href="index.html#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="index.html#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="md:hidden mt-4 pb-4 border-t border-border pt-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-medium text-primary">Products</a>
+                    <a href="index.html#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="index.html#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section class="py-16 bg-muted/30">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-6 text-balance">
+                        Professional Cleaning Products
+                    </h1>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                        Browse our complete catalog of pure, concentrated chemicals and cleaning supplies with transparent pricing.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex justify-center mb-12">
+                    <div class="inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground">
+                        <button id="tab-by-industry" class="tab-button active inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+                            By Industry
+                        </button>
+                        <button id="tab-all-products" class="tab-button inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm">
+                            All Products
+                        </button>
+                    </div>
+                </div>
+
+                <div id="by-industry-content" class="tab-content">
+                    <div class="flex justify-center mb-12">
+                        <div class="grid grid-cols-3 lg:grid-cols-6 gap-2 bg-muted p-1 rounded-md">
+                            <button class="industry-tab active text-xs px-3 py-2 rounded-sm bg-background text-foreground shadow-sm" data-industry="pubs-bars">Pubs & Bars</button>
+                            <button class="industry-tab text-xs px-3 py-2 rounded-sm hover:bg-background/50" data-industry="restaurants-cafes">Restaurants</button>
+                            <button class="industry-tab text-xs px-3 py-2 rounded-sm hover:bg-background/50" data-industry="offices">Offices</button>
+                            <button class="industry-tab text-xs px-3 py-2 rounded-sm hover:bg-background/50" data-industry="automotive">Automotive</button>
+                            <button class="industry-tab text-xs px-3 py-2 rounded-sm hover:bg-background/50" data-industry="healthcare">Healthcare</button>
+                            <button class="industry-tab text-xs px-3 py-2 rounded-sm hover:bg-background/50" data-industry="retail">Retail</button>
+                        </div>
+                    </div>
+
+                    <div id="industry-content">
+                         Content will be populated by JavaScript 
+                    </div>
+                </div>
+
+                <div id="all-products-content" class="tab-content hidden">
+                    <div class="max-w-2xl mx-auto space-y-4 mb-8">
+                        <div class="relative">
+                            <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5"></i>
+                            <input
+                                type="text"
+                                id="product-search"
+                                placeholder="Search products by name, description, or code..."
+                                class="w-full pl-10 pr-4 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                            />
+                        </div>
+
+                        <div id="category-filters" class="flex flex-wrap gap-2">
+                            <button class="category-filter active inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3" data-category="">
+                                All Categories
+                            </button>
+                             Category buttons will be populated by JavaScript 
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <p class="text-muted-foreground">
+                            Showing <span id="filtered-count">0</span> of <span id="total-count">0</span> products
+                        </p>
+                    </div>
+
+                    <div id="all-products-grid" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                         Products will be populated by JavaScript 
+                    </div>
+
+                    <div id="no-products-message" class="text-center py-12 hidden">
+                        <p class="text-muted-foreground">No products found matching your search criteria.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-muted py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold mb-4">Clean and Supply Southwest LTD</h3>
+                    <p class="text-muted-foreground mb-4 leading-relaxed">
+                        Your trusted partner for professional cleaning supplies and chemicals across the Southwest region.
+                        Quality products, reliable service, competitive prices.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="tel:+441234567890" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:info@cleanandsupplysw.co.uk" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#about" class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-muted-foreground hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="index.html#services" class="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="index.html#contact" class="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium mb-4">Service Areas</h4>
+                    <ul class="space-y-2 text-muted-foreground">
+                        <li>Devon</li>
+                        <li>Cornwall</li>
+                        <li>Somerset</li>
+                        <li>Dorset</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground">
+                    © 2025 Clean and Supply Southwest LTD. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

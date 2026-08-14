@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean and Supply Southwest LTD - Professional Cleaning Solutions</title>
+    <meta name="description" content="Professional cleaning solutions for your business. Clean and Supply Southwest LTD is your trusted partner for commercial and industrial cleaning supplies and services.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
+                    Clean and Supply Southwest LTD
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-medium hover:text-primary transition-colors">Products</a>
+                    <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </nav>
+
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <nav class="md:hidden mt-4 pb-4 border-t border-border pt-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-medium hover:text-primary transition-colors">Products</a>
+                    <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+                    <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img
+                    src="images/professional-cleaning-supplies-warehouse.webp"
+                    alt="Professional cleaning supplies warehouse"
+                    class="w-full h-full object-cover opacity-20 hero-parallax"
+                />
+                <div class="absolute inset-0 bg-gradient-to-b from-background/50 to-background/80"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-5xl md:text-7xl font-light tracking-tight text-balance mb-8 fade-in-up">
+                        Professional cleaning solutions for your business
+                    </h1>
+                    <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-pretty fade-in-up animate-delay-200">
+                        Clean and Supply Southwest LTD is your trusted partner for commercial and industrial cleaning supplies and
+                        services across the Southwest region.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-delay-400">
+                        <button class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 hover-glow btn-pulse" onclick="window.location.href='products.html'">
+                            View Our Products
+                            <i data-lucide="arrow-right" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-muted/30">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                            About Clean and Supply Southwest LTD
+                        </h2>
+                        <p class="text-lg text-muted-foreground text-pretty fade-in-up animate-delay-200">
+                            We are a leading supplier of professional cleaning chemicals and supplies, serving businesses across the Southwest region with quality products and exceptional service.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="fade-in-left">
+                            <h3 class="text-2xl font-medium mb-6">Our Commitment</h3>
+                            <div class="space-y-4">
+                                <p class="text-muted-foreground leading-relaxed">
+                                    We specialize in providing pure, concentrated cleaning chemicals that deliver exceptional results while being cost-effective for your business operations.
+                                </p>
+                                <p class="text-muted-foreground leading-relaxed">
+                                    Our extensive product range covers everything from industrial degreasers to specialized sanitizers, ensuring we have the right solution for every cleaning challenge.
+                                </p>
+                                <p class="text-muted-foreground leading-relaxed">
+                                    With years of experience in the industry, we understand the unique needs of different business sectors and provide tailored solutions accordingly.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative fade-in-right">
+                            <img
+                                src="images/industrial-cleaning-chemicals-bottles.webp"
+                                alt="Professional cleaning chemicals"
+                                class="rounded-lg shadow-lg w-full hover-lift"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                        Our Services
+                    </h2>
+                    <p class="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty fade-in-up animate-delay-200">
+                        Comprehensive cleaning solutions tailored to your business needs
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="droplets" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Pure Chemicals</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                High-quality, concentrated cleaning chemicals that provide superior cleaning power and value for money.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-100">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="truck" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Reliable Delivery</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Fast and dependable delivery service across the Southwest region to keep your operations running smoothly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-200">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Expert Support</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Professional guidance and support to help you choose the right products for your specific cleaning needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-300">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Safety First</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                All our products meet strict safety standards and come with comprehensive safety data sheets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-400">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="calculator" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Custom Quotes</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Personalized pricing based on your specific requirements and volume needs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-500">
+                        <div class="mb-6">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="recycle" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-medium mb-3">Eco-Friendly Options</h3>
+                            <p class="text-muted-foreground leading-relaxed">
+                                Environmentally responsible cleaning solutions that don't compromise on effectiveness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-muted/30">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                            Get in Touch
+                        </h2>
+                        <p class="text-lg text-muted-foreground text-pretty fade-in-up animate-delay-200">
+                            Ready to discuss your cleaning supply needs? Contact us today for a personalized quote.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8 fade-in-left">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-medium mb-2">Phone</h3>
+                                    <p class="text-muted-foreground">Call us for immediate assistance</p>
+                                    <a href="tel:+441225774771" class="text-primary hover:underline font-medium">
+                                        01225774771
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-medium mb-2">Email</h3>
+                                    <p class="text-muted-foreground">Send us your requirements</p>
+                                    <a href="mailto:sales@cleanandsupply.co.uk" class="text-primary hover:underline font-medium">
+                                        sales@cleanandsupply.co.uk
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-medium mb-2">Service Area</h3>
+                                    <p class="text-muted-foreground">
+                                        Southwest England<br />
+                                        Devon, Cornwall, Somerset, Dorset
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-muted py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-lg font-semibold mb-4">Clean and Supply Southwest LTD</h3>
+                    <p class="text-muted-foreground mb-4 leading-relaxed">
+                        Your trusted partner for professional cleaning supplies and chemicals across the Southwest region.
+                        Quality products, reliable service, competitive prices.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="tel:+441234567890" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </a>
+                        <a href="mailto:info@cleanandsupplysw.co.uk" class="text-muted-foreground hover:text-primary transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-muted-foreground hover:text-primary transition-colors">Products</a></li>
+                        <li><a href="#services" class="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-medium mb-4">Service Areas</h4>
+                    <ul class="space-y-2 text-muted-foreground">
+                        <li>Devon</li>
+                        <li>Cornwall</li>
+                        <li>Somerset</li>
+                        <li>Dorset</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground">
+                    © 2025 Clean and Supply Southwest LTD. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

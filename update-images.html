@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .file-input {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px dashed #ccc;
+            border-radius: 4px;
+            text-align: center;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover { background: #45a049; }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .success { color: #4CAF50; }
+        .error { color: #f44336; }
+        .warning { color: #ff9800; }
+        .download-btn {
+            background: #2196F3;
+            margin-left: 10px;
+        }
+        .download-btn:hover { background: #0b7dda; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Product Image Updater</h1>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <ol>
+                <li><strong>Step 1:</strong> Select your <code>products.js</code> file</li>
+                <li><strong>Step 2:</strong> Select ALL product images from your <code>images/</code> folder</li>
+                <li><strong>Step 3:</strong> Click "Match & Update Products" to see live updates</li>
+                <li><strong>Step 4:</strong> Download the updated <code>products.js</code> file</li>
+                <li><strong>Step 5:</strong> Replace your old products.js with the new one</li>
+            </ol>
+            <p><strong>Image Naming:</strong> "Product Name - Size.png" (e.g., "Acid Wash 80 - 1L.png")</p>
+        </div>
+
+        <!-- Added products.js file input -->
+        <div class="file-input">
+            <label for="productsFile">
+                <strong>Step 1: Select your products.js file</strong>
+            </label>
+            <br><br>
+            <input type="file" id="productsFile" accept=".js">
+            <div id="productsStatus" style="margin-top: 10px; font-weight: bold;"></div>
+        </div>
+
+        <div class="file-input">
+            <label for="imageFiles">
+                <strong>Step 2: Select all product images from your images folder</strong>
+            </label>
+            <br><br>
+            <input type="file" id="imageFiles" accept="image/*" multiple>
+            <div id="imagesStatus" style="margin-top: 10px; font-weight: bold;"></div>
+        </div>
+
+        <button id="updateBtn" onclick="processImages()">Match & Update Products</button>
+        <button id="downloadBtn" onclick="downloadUpdatedFile()" style="display:none;" class="download-btn">Download Updated products.js</button>
+
+        <div id="results" class="results" style="display:none;">
+            <div id="summary" style="margin-bottom: 15px; padding: 10px; background: #fff3cd; border-radius: 4px;">
+                <strong>Initializing...</strong>
+            </div>
+            <div id="liveLog" style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background: #fafafa;"></div>
+        </div>
+    </div>
+
+    <script>
+        let updatedProductsContent = '';
+        let loadedProductsData = null;
+        let loadedProductsFile = null;
+
+        document.getElementById('productsFile').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                try {
+                    const content = await file.text();
+                    const tempFunc = new Function(content + '; return productsByBusinessType;');
+                    loadedProductsData = tempFunc();
+                    loadedProductsFile = content;
+                    document.getElementById('productsStatus').innerHTML = '<span class="success">✓ products.js loaded successfully!</span>';
+                    console.log("[v0] Products loaded:", Object.keys(loadedProductsData));
+                } catch (error) {
+                    document.getElementById('productsStatus').innerHTML = '<span class="error">✗ Error loading products.js</span>';
+                    console.error("[v0] Error loading products.js:", error);
+                    alert('Error loading products.js: ' + error.message);
+                }
+            }
+        });
+
+        document.getElementById('imageFiles').addEventListener('change', (e) => {
+            const count = e.target.files.length;
+            if (count > 0) {
+                document.getElementById('imagesStatus').innerHTML = `<span class="success">✓ ${count} image files selected</span>`;
+            }
+        });
+
+        function normalizeString(str) {
+            return str.toLowerCase()
+                .replace(/[^a-z0-9]/g, '')
+                .trim();
+        }
+
+        function extractSizeFromString(str) {
+            const sizePatterns = [
+                /(\d+(?:\.\d+)?)\s*l(?:itre)?s?/i,
+                /(\d+)\s*ml/i,
+                /(\d+)\s*kg/i,
+                /(\d+)\s*g(?:ram)?s?/i
+            ];
+            
+            for (const pattern of sizePatterns) {
+                const match = str.match(pattern);
+                if (match) return match[0].toLowerCase();
+            }
+            return null;
+        }
+
+        function addLogEntry(message, type = 'info') {
+            const logContainer = document.getElementById('liveLog');
+            const entry = document.createElement('div');
+            entry.className = type;
+            entry.innerHTML = message;
+            logContainer.appendChild(entry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+
+        async function processImages() {
+            console.log("[v0] Starting processImages function");
+            
+            if (!loadedProductsData || !loadedProductsFile) {
+                alert('Please select your products.js file first!');
+                return;
+            }
+
+            const fileInput = document.getElementById('imageFiles');
+            const files = fileInput.files;
+            const resultsDiv = document.getElementById('results');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const updateBtn = document.getElementById('updateBtn');
+            const summaryDiv = document.getElementById('summary');
+            const logContainer = document.getElementById('liveLog');
+            
+            console.log("[v0] Selected files:", files.length);
+            
+            if (files.length === 0) {
+                alert('Please select image files first!');
+                return;
+            }
+
+            updateBtn.disabled = true;
+            resultsDiv.style.display = 'block';
+            logContainer.innerHTML = '';
+            
+            summaryDiv.innerHTML = '<strong>Initializing...</strong>';
+
+            try {
+                addLogEntry('Scanning image files...', 'warning');
+                await new Promise(resolve => setTimeout(resolve, 100));
+
+                const imageMap = new Map();
+                console.log("[v0] Building image map...");
+                
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    const fileName = file.name;
+                    const baseName = fileName.replace(/\.(png|jpg|jpeg|webp)$/i, '');
+                    const normalized = normalizeString(baseName);
+                    const size = extractSizeFromString(baseName);
+                    
+                    imageMap.set(normalized, fileName);
+                    if (size) {
+                        imageMap.set(normalized + normalizeString(size), fileName);
+                    }
+
+                    if (i % 50 === 0 || i === files.length - 1) {
+                        addLogEntry(`Scanned ${i + 1} of ${files.length} images...`, 'warning');
+                        await new Promise(resolve => setTimeout(resolve, 5));
+                    }
+                }
+
+                console.log("[v0] Image map built. Size:", imageMap.size);
+                addLogEntry(`<strong>Scan complete! Found ${imageMap.size} unique image patterns</strong>`, 'success');
+                addLogEntry('', 'info');
+                addLogEntry('Starting product matching...', 'warning');
+                addLogEntry('', 'info');
+                
+                await new Promise(resolve => setTimeout(resolve, 100));
+
+                let matched = 0;
+                let unmatched = 0;
+                let unchanged = 0;
+                let totalProducts = 0;
+
+                const productsData = JSON.parse(JSON.stringify(loadedProductsData));
+
+                for (const businessType in productsData) {
+                    const business = productsData[businessType];
+                    if (business.essential) totalProducts += business.essential.length;
+                    if (business.recommended) totalProducts += business.recommended.length;
+                }
+
+                console.log("[v0] Total products to process:", totalProducts);
+                let processedCount = 0;
+
+                for (const businessType in productsData) {
+                    const business = productsData[businessType];
+                    
+                    if (business.essential) {
+                        for (let i = 0; i < business.essential.length; i++) {
+                            const product = business.essential[i];
+                            const oldImage = product.image;
+                            await processProduct(product, imageMap, processedCount, totalProducts);
+                            processedCount++;
+                            
+                            if (product.matchedImage && product.matchedImage !== oldImage) {
+                                matched++;
+                                business.essential[i].image = product.matchedImage;
+                            } else if (!product.matchedImage) {
+                                unmatched++;
+                            } else {
+                                unchanged++;
+                            }
+
+                            summaryDiv.innerHTML = `
+                                <strong>Progress: ${processedCount} / ${totalProducts} (${Math.round((processedCount / totalProducts) * 100)}%)</strong><br>
+                                <span class="success">Changed: ${matched}</span> | 
+                                <span class="error">No Match: ${unmatched}</span> | 
+                                <span class="info">Unchanged: ${unchanged}</span>
+                            `;
+                        }
+                    }
+
+                    if (business.recommended) {
+                        for (let i = 0; i < business.recommended.length; i++) {
+                            const product = business.recommended[i];
+                            const oldImage = product.image;
+                            await processProduct(product, imageMap, processedCount, totalProducts);
+                            processedCount++;
+                            
+                            if (product.matchedImage && product.matchedImage !== oldImage) {
+                                matched++;
+                                business.recommended[i].image = product.matchedImage;
+                            } else if (!product.matchedImage) {
+                                unmatched++;
+                            } else {
+                                unchanged++;
+                            }
+
+                            summaryDiv.innerHTML = `
+                                <strong>Progress: ${processedCount} / ${totalProducts} (${Math.round((processedCount / totalProducts) * 100)}%)</strong><br>
+                                <span class="success">Changed: ${matched}</span> | 
+                                <span class="error">No Match: ${unmatched}</span> | 
+                                <span class="info">Unchanged: ${unchanged}</span>
+                            `;
+                        }
+                    }
+                }
+
+                console.log("[v0] Product matching complete. Generating file...");
+                addLogEntry('', 'info');
+                addLogEntry('Generating updated products.js file...', 'warning');
+                await new Promise(resolve => setTimeout(resolve, 100));
+
+                updatedProductsContent = `// Products page specific functionality
+
+// Product data with inline image paths
+const productsByBusinessType = ${JSON.stringify(productsData, null, 2)};`;
+
+                console.log("[v0] File generated. Length:", updatedProductsContent.length);
+                addLogEntry('<strong>File generation complete!</strong>', 'success');
+
+                summaryDiv.innerHTML = `
+                    <strong>PROCESSING COMPLETE!</strong><br>
+                    <span class="success">Changed: ${matched}</span> | 
+                    <span class="error">No Match: ${unmatched}</span> | 
+                    <span class="info">Unchanged: ${unchanged}</span><br>
+                    <small>Total products: ${totalProducts} | Images scanned: ${files.length}</small>
+                `;
+
+                downloadBtn.style.display = 'inline-block';
+                console.log("[v0] Process complete!");
+
+            } catch (error) {
+                addLogEntry(`<strong>ERROR: ${error.message}</strong>`, 'error');
+                console.error("[v0] Processing error:", error);
+                alert('Error: ' + error.message);
+            } finally {
+                updateBtn.disabled = false;
+            }
+        }
+
+        async function processProduct(product, imageMap, processedCount, totalProducts) {
+            const productName = product.name || '';
+            const productSize = extractSizeFromString(productName) || '';
+            
+            if (processedCount === 0) {
+                console.log("[v0] First product:", productName);
+            }
+            
+            const searchKeys = [
+                normalizeString(productName),
+                normalizeString(productName) + normalizeString(productSize),
+            ];
+
+            let matchedImage = null;
+            for (const key of searchKeys) {
+                if (imageMap.has(key)) {
+                    matchedImage = imageMap.get(key);
+                    break;
+                }
+            }
+
+            product.matchedImage = matchedImage;
+
+            if (matchedImage && matchedImage !== product.image) {
+                addLogEntry(`CHANGED: "${productName}" → <strong>${matchedImage}</strong>`, 'success');
+            } else if (!matchedImage) {
+                addLogEntry(`NO MATCH: "${productName}" (keeping: ${product.image})`, 'error');
+            } else {
+                addLogEntry(`UNCHANGED: "${productName}" (already: ${product.image})`, 'info');
+            }
+
+            if (processedCount % 1 === 0) {
+                await new Promise(resolve => setTimeout(resolve, 0));
+            }
+        }
+
+        function downloadUpdatedFile() {
+            if (!updatedProductsContent) {
+                alert('Please process images first!');
+                return;
+            }
+
+            const blob = new Blob([updatedProductsContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'products-updated.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert('Downloaded as .txt file! Copy the contents and paste it into your products.js file.');
+        }
+    </script>
+</body>
+</html>
