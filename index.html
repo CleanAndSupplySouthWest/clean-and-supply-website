@@ -6,12 +6,15 @@
     <title>Clean and Supply Southwest LTD - Professional Cleaning Solutions</title>
     <meta name="description" content="Professional cleaning solutions for your business. Clean and Supply Southwest LTD is your trusted partner for commercial and industrial cleaning supplies and services.">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body class="min-h-screen bg-background text-foreground">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
@@ -63,7 +66,7 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-delay-400">
-                        <button class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 hover-glow btn-pulse" onclick="window.location.href='products.html'">
+                        <button class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8" onclick="window.location.href='products.html'">
                             View Our Products
                             <i data-lucide="arrow-right" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
                         </button>
@@ -71,6 +74,14 @@
                             <i data-lucide="phone" class="mr-2 h-4 w-4"></i>
                             Call 01225 774771
                         </a>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mt-10 text-xs font-medium uppercase tracking-wide text-muted-foreground fade-in-up animate-delay-500">
+                        <span>Serving</span>
+                        <span class="px-2.5 py-1 rounded-full border border-border">Devon</span>
+                        <span class="px-2.5 py-1 rounded-full border border-border">Cornwall</span>
+                        <span class="px-2.5 py-1 rounded-full border border-border">Somerset</span>
+                        <span class="px-2.5 py-1 rounded-full border border-border">Dorset</span>
                     </div>
                 </div>
             </div>
@@ -91,17 +102,23 @@
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="fade-in-left">
                             <h3 class="text-2xl font-medium mb-6">Our Commitment</h3>
-                            <div class="space-y-4">
-                                <p class="text-muted-foreground leading-relaxed">
-                                    We specialize in providing pure, concentrated cleaning chemicals that deliver exceptional results while being cost-effective for your business operations.
-                                </p>
-                                <p class="text-muted-foreground leading-relaxed">
-                                    Our extensive product range covers everything from industrial degreasers to specialized sanitizers, ensuring we have the right solution for every cleaning challenge.
-                                </p>
-                                <p class="text-muted-foreground leading-relaxed">
-                                    With years of experience in the industry, we understand the unique needs of different business sectors and provide tailored solutions accordingly.
-                                </p>
-                            </div>
+                            <p class="text-muted-foreground leading-relaxed mb-6">
+                                We specialize in providing pure, concentrated cleaning chemicals that deliver exceptional results while being cost-effective for your business operations.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-muted-foreground leading-relaxed">Extensive range covering everything from industrial degreasers to specialized sanitizers</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-muted-foreground leading-relaxed">Tailored solutions for the unique needs of different business sectors</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <span class="text-muted-foreground leading-relaxed">Transparent, upfront pricing with no hidden costs</span>
+                                </li>
+                            </ul>
                         </div>
                         <div class="relative fade-in-right">
                             <img
