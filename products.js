@@ -3336,6 +3336,7 @@ function initializeEventListeners() {
   // Tab switching
   document.getElementById("tab-by-industry").addEventListener("click", () => switchTab("by-industry"))
   document.getElementById("tab-all-products").addEventListener("click", () => switchTab("all-products"))
+  document.getElementById("tab-paper-products").addEventListener("click", () => switchTab("paper-products"))
 
   // Industry tabs
   document.querySelectorAll(".industry-tab").forEach((tab) => {
@@ -3367,6 +3368,28 @@ function switchTab(tabName) {
     generateCategoryFilters()
     filterAllProducts()
   }
+
+  if (tabName === "paper-products") {
+    loadPaperProducts()
+  }
+}
+
+const PAPER_PRODUCT_CATEGORIES = new Set([
+  "Centrefeed",
+  "Tissue",
+  "Toilet Rolls",
+  "Hand Towels",
+  "Napkins",
+  "Hygiene/Medical Rolls",
+])
+
+function loadPaperProducts() {
+  const paperProducts = allProducts
+    .filter((product) => PAPER_PRODUCT_CATEGORIES.has(product.category))
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const container = document.getElementById("paper-products-grid")
+  container.innerHTML = paperProducts.map((product) => createProductCard(product)).join("")
 }
 
 function switchIndustry(industry) {
