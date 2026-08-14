@@ -340,7 +340,7 @@ const productsByBusinessType = {
   },
   automotive: {
     title: "Automotive",
-    description: "Specialized cleaning products for automotive businesses",
+    description: "Specialised cleaning products for automotive businesses",
     essential: [
       {
         name: "Magnum Force Extra - 5L",
