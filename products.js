@@ -3205,6 +3205,14 @@ const allProductsCatalog = [
     price: 2.55,
     image: "Leather Cleaner - 300ml.webp",
   },
+  {
+    name: "Viro-Sol 20L",
+    description: "Citrus Based Cleaner/Degreaser",
+    code: "",
+    category: "Degreasers",
+    price: 47.03,
+    image: "Viro Sol - 20L.webp",
+  },
 ]
 
 /**
