@@ -72,14 +72,7 @@ const productsByBusinessType = {
         price: 11.07,
         image: "Spray & Wipe - 5L.webp",
       },
-      {
-        name: "Enchant 750ml",
-        description: "High Impact Lemon Air Freshener",
-        code: "816",
-        category: "Air Fresheners/ Deodorisers",
-        price: 3.84,
-        image: "Enchant - 750ml.webp",
-      },
+      
       {
         name: "Centrefeed 2 ply White",
         description: "Centrefeed 2 ply white",
@@ -96,14 +89,7 @@ const productsByBusinessType = {
         price: 3.46,
         image: "Arosa - 750ml.webp",
       },
-      {
-        name: "Royal Cologne - 750ml",
-        description: "'Designer' Fragrance Air Freshener",
-        code: "811",
-        category: "Air Fresheners/ Deodorisers",
-        price: 3,
-        image: "Royal Cologne - 750ml.webp",
-      },
+      
     ],
   },
   "restaurants-cafes": {
@@ -134,14 +120,7 @@ const productsByBusinessType = {
         price: 10.53,
         image: "senses-fragrance-free-antibacterial-hand-wash.webp",
       },
-      {
-        name: "Blue detectable plasters",
-        description: "Blue Plasters (100)",
-        code: "BLPLASTERS",
-        category: "Catering Essentials",
-        price: 2.1,
-        image: "blue-detectable-plasters.webp",
-      },
+      
       {
         name: "Halo Milk Line 1L",
         description: "Frother Cleaner",
@@ -199,14 +178,6 @@ const productsByBusinessType = {
         category: "Catering Essentials",
         price: 15.34,
         image: "baking-paper-cutterbox.webp",
-      },
-      {
-        name: '18" Piping Bags (100) on roll',
-        description: '18" Piping Bags (100) on roll',
-        code: "PIPING",
-        category: "Catering Essentials",
-        price: 12.42,
-        image: "piping-bags-roll.webp",
       },
       {
         name: "Barista Cloth- Orange",
@@ -288,14 +259,7 @@ const productsByBusinessType = {
       },
     ],
     recommended: [
-      {
-        name: "VDU Wipes",
-        description: "Screen Wipes",
-        code: "RH95",
-        category: "Wipes",
-        price: 2.4,
-        image: "vdu-wipes.webp",
-      },
+      
       {
         name: "Microfibre Cloth Blue (1)",
         description: "Microfibre Cloth Blue",
@@ -328,14 +292,7 @@ const productsByBusinessType = {
         price: 5.21,
         image: "Swift - 750ml.webp",
       },
-      {
-        name: "Yellow Dusters",
-        description: "Dusters",
-        code: "700S.14.10",
-        category: "Polish & Glass",
-        price: 3.35,
-        image: "yellow-dusters.webp",
-      },
+      
     ],
   },
   automotive: {
@@ -358,14 +315,7 @@ const productsByBusinessType = {
         price: 29.91,
         image: "Truck Wash 80 - 20L.webp",
       },
-      {
-        name: "Autogloss",
-        description: "Car Polish",
-        code: "602",
-        category: "Automotive",
-        price: 27.24,
-        image: "Autogloss - 5L.webp",
-      },
+      
       {
         name: "Trim Shine 750ml",
         description: "Trim Shine 750ml",
@@ -424,14 +374,7 @@ const productsByBusinessType = {
         price: 11.61,
         image: "DD10 - 5L.webp",
       },
-      {
-        name: "Disposable Car Seat Covers",
-        description: "Car seat Covers",
-        code: "DCARCOVERS",
-        category: "Automotive",
-        price: null,
-        image: "disposable-car-seat-covers.webp",
-      },
+      
       {
         name: "SkyTech Blue Wiping Roll 2 Ply Recycled 26cm x 350m",
         description: "Workshop Rolls 2 Ply Blue",
@@ -440,14 +383,7 @@ const productsByBusinessType = {
         price: 28.93,
         image: "skytech-blue-wiping-roll.webp",
       },
-      {
-        name: "Senses Lemon Industrial Hand Cleaner 5L",
-        description: "Bead Free Lemon Hand Cleaner 5L",
-        code: "72978",
-        category: "Soaps",
-        price: 15.1,
-        image: "senses-lemon-industrial-hand-cleaner.webp",
-      },
+      
       {
         name: "Dermex Mechanic Soap (Buster Extra) 5L",
         description: "Engineers Hand Cleaner",
@@ -528,22 +464,8 @@ const productsByBusinessType = {
         price: 4.71,
         image: "nitrile-blue-pro-ultraflex-gloves-l.webp",
       },
-      {
-        name: "Aprons blue (500)",
-        description: "Disposable Aprons",
-        code: "BAPRON",
-        category: "Protective Wear",
-        price: 40.32,
-        image: "aprons-blue.webp",
-      },
-      {
-        name: "Alcohol-free Clinical Wipes",
-        description: "Sanitising wipes for hard surfaces tub x 200",
-        code: "686",
-        category: "Wipes",
-        price: 4.43,
-        image: "alcohol-free-clinical-wipes.webp",
-      },
+      
+      
       {
         name: "Laundry Sanitiser - 5L",
         description: "Specialist Sanitiser Additive",
@@ -552,14 +474,7 @@ const productsByBusinessType = {
         price: 50.04,
         image: "laundry-sanitiser.webp",
       },
-      {
-        name: "KN95 MASKS (Individual)",
-        description: "Facemasks",
-        code: "KN95",
-        category: "Covid",
-        price: 0.3,
-        image: "kn95-masks.webp",
-      },
+      
       {
         name: "V7 Antiviral Hand Soap 500ml",
         description: "Hycolin Antiviral Hand Soap 500ml",
@@ -648,14 +563,7 @@ const productsByBusinessType = {
       },
     ],
     recommended: [
-      {
-        name: "Enchant 750ml",
-        description: "High Impact Lemon Air Freshener",
-        code: "816",
-        category: "Air Fresheners/ Deodorisers",
-        price: 3.84,
-        image: "Enchant - 750ml.webp",
-      },
+      
       {
         name: "Microfibre Cloth Yellow (1)",
         description: "Microfibre Cloth Yellow",
@@ -793,14 +701,7 @@ const allProductsCatalog = [
     price: 3.45,
     image: "cleen-air-freshener-vanilla.webp",
   },
-  {
-    name: "Enchant 750ml",
-    description: "High Impact Lemon Air Freshener",
-    code: "816",
-    category: "Air Fresheners/ Deodorisers",
-    price: 3.84,
-    image: "Enchant - 750ml.webp",
-  },
+  
   {
     name: "Lufra San Deo (Fresh Deodoriser Concentrate)",
     description: "Candy Disinfectant / Deodoriser 5L",
@@ -853,22 +754,8 @@ const allProductsCatalog = [
     price: 8.78,
     image: "Activ F - 5L.webp",
   },
-  {
-    name: "Autogloss",
-    description: "Car Polish",
-    code: "602",
-    category: "Automotive",
-    price: 27.24,
-    image: "Autogloss - 5L.webp",
-  },
-  {
-    name: "Disposable Car Seat Covers",
-    description: "Car seat Covers",
-    code: "DCARCOVERS",
-    category: "Automotive",
-    price: null,
-    image: "disposable-car-seat-covers.webp",
-  },
+  
+  
   {
     name: "Magnum Force Extra - 5L",
     description: "Heavy Duty Traffic Film Remover",
@@ -905,14 +792,7 @@ const allProductsCatalog = [
   },
 
   // Bins
-  {
-    name: "Cigarette Bin",
-    description: "Cigarette Bin",
-    code: "CIGBIN",
-    category: "Bins",
-    price: 23.45,
-    image: "cigarette-bin.webp",
-  },
+  
   {
     name: "Procycle Recycling Bin 80L",
     description: "Grey Recycling bin, lid and back panel",
@@ -995,14 +875,7 @@ const allProductsCatalog = [
     price: 0.69,
     image: "60ml-measuring-cup.webp",
   },
-  {
-    name: "750ml Trigger Bottle Complete- Cleenol",
-    description: "Bottle",
-    code: "TBCC",
-    category: "Bottles and Heads",
-    price: 1.65,
-    image: "750ml-trigger-bottle.webp",
-  },
+  
   {
     name: "Bottle Cap (500ml round bottle top)",
     description: "Bottle Cap",
@@ -1011,14 +884,7 @@ const allProductsCatalog = [
     price: 0.3,
     image: "bottle-cap-500ml.webp",
   },
-  {
-    name: "Cleenol Trigger Heads",
-    description: "Trigger Heads",
-    code: "CLNTRGH",
-    category: "Bottles and Heads",
-    price: 0.65,
-    image: "cleenol-trigger-heads.webp",
-  },
+  
   {
     name: "Pelican Pump - 5L Cleenol",
     description: "Pelican Pump - 5L Cleenol",
@@ -1597,14 +1463,7 @@ const allProductsCatalog = [
     price: 12.5,
     image: "henry-hoover-bags.webp",
   },
-  {
-    name: "Henry Turbo Head",
-    description: "Turbo head for numatic range",
-    code: "HENRYTURBO",
-    category: "Carpet Cleaning",
-    price: 25,
-    image: "henry-turbo-head.webp",
-  },
+  
   {
     name: "SAS 20 - 750ml",
     description: "Spot and Stain Remover",
@@ -1615,14 +1474,6 @@ const allProductsCatalog = [
   },
 
   // Catering Essentials
-  {
-    name: '18" Piping Bags (100) on roll',
-    description: '18" Piping Bags (100) on roll',
-    code: "PIPING",
-    category: "Catering Essentials",
-    price: 12.42,
-    image: "piping-bags-roll.webp",
-  },
   {
     name: "All purpose anti-bacterial wipes YELLOW ROLL",
     description: "All Purpose Wipes, tear off roll boxed, 200",
@@ -1719,14 +1570,7 @@ const allProductsCatalog = [
     price: 3.95,
     image: "black-straws.webp",
   },
-  {
-    name: "Blue detectable plasters",
-    description: "Blue Plasters (100)",
-    code: "BLPLASTERS",
-    category: "Catering Essentials",
-    price: 2.1,
-    image: "blue-detectable-plasters.webp",
-  },
+  
   {
     name: 'Catering foil (12") Cutterbox x 75M',
     description: "Catering foil",
@@ -2369,14 +2213,7 @@ const allProductsCatalog = [
     price: 10.53,
     image: "senses-fragrance-free-antibacterial-hand-wash.webp",
   },
-  {
-    name: "Senses Lemon Industrial Hand Cleaner 5L",
-    description: "Bead Free Lemon Hand Cleaner 5L",
-    code: "72978",
-    category: "Soaps",
-    price: 15.1,
-    image: "senses-lemon-industrial-hand-cleaner.webp",
-  },
+  
   {
     name: "Silk - 300ml",
     description: "Luxury Hand Soap",
@@ -2575,30 +2412,9 @@ const allProductsCatalog = [
   },
 
   // Wipes
-  {
-    name: "Alcohol-free Clinical Wipes",
-    description: "Sanitising wipes for hard surfaces tub x 200",
-    code: "686",
-    category: "Wipes",
-    price: 4.43,
-    image: "alcohol-free-clinical-wipes.webp",
-  },
-  {
-    name: "Cleenol Alcohol Wipes (200)",
-    description: "Alcohol Wipes",
-    code: "13646AW",
-    category: "Wipes",
-    price: 3.9,
-    image: "cleenol-alcohol-wipes.webp",
-  },
-  {
-    name: "Cleenol Wipes FOOD SAFE (200)",
-    description: "Food Safe Wipes",
-    code: "RH94",
-    category: "Wipes",
-    price: 3.27,
-    image: "cleenol-food-safe-wipes.webp",
-  },
+  
+  
+  
   {
     name: "Disinfectant Surface Wipes",
     description: "Lemon Fresh Wipes x 60",
@@ -2607,14 +2423,7 @@ const allProductsCatalog = [
     price: 2.48,
     image: "disinfectant-surface-wipes.webp",
   },
-  {
-    name: "VDU Wipes",
-    description: "Screen Wipes",
-    code: "RH95",
-    category: "Wipes",
-    price: 2.4,
-    image: "vdu-wipes.webp",
-  },
+  
 
   // Sacks
   {
@@ -2731,14 +2540,7 @@ const allProductsCatalog = [
     price: 5.21,
     image: "Swift - 750ml.webp",
   },
-  {
-    name: "Yellow Dusters",
-    description: "Dusters",
-    code: "700S.14.10",
-    category: "Polish & Glass",
-    price: 3.35,
-    image: "yellow-dusters.webp",
-  },
+  
 
   // Napkins
   {
@@ -2769,14 +2571,7 @@ const allProductsCatalog = [
   },
 
   // Protective Wear
-  {
-    name: "Aprons blue (500)",
-    description: "Disposable Aprons",
-    code: "BAPRON",
-    category: "Protective Wear",
-    price: 40.32,
-    image: "aprons-blue.webp",
-  },
+  
   {
     name: "Blue Mesh Hairnets (100)",
     description: "Hairnets",
@@ -2827,14 +2622,7 @@ const allProductsCatalog = [
     price: 2.78,
     image: "antiviral-wipes-hycolin.webp",
   },
-  {
-    name: "KN95 MASKS (Individual)",
-    description: "Facemasks",
-    code: "KN95",
-    category: "Covid",
-    price: 0.3,
-    image: "kn95-masks.webp",
-  },
+  
   {
     name: "PRO Type IIR Facemasks disposable",
     description: "Facemasks Type IIR, box of 50",
