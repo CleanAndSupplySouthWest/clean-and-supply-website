@@ -382,6 +382,7 @@ const productsByBusinessType = {
         category: "Hand Towels",
         price: 28.93,
         image: "skytech-blue-wiping-roll.webp",
+        eco: true,
       },
       
       {
@@ -1388,6 +1389,7 @@ const allProductsCatalog = [
     category: "Buckets and Signs",
     price: 5.4,
     image: "eco-wet-floor-sign.webp",
+    eco: true,
   },
   {
     name: "Standard Safety Cone",
@@ -2106,6 +2108,7 @@ const allProductsCatalog = [
     category: "Hand Towels",
     price: 21.31,
     image: "hand-towels-c-fold-blue.webp",
+    eco: true,
   },
   {
     name: "Hand Towels - C Fold, 2 Ply White",
@@ -2138,6 +2141,7 @@ const allProductsCatalog = [
     category: "Hand Towels",
     price: 28.93,
     image: "skytech-blue-wiping-roll.webp",
+    eco: true,
   },
 
   // Soaps
@@ -2550,6 +2554,7 @@ const allProductsCatalog = [
     category: "Napkins",
     price: 29.68,
     image: "napkins-recycled-33cm.webp",
+    eco: true,
   },
   {
     name: "Napkins, 40cm, 2 ply white",
@@ -2888,6 +2893,7 @@ const allProductsCatalog = [
     category: "All purpose cleaners",
     price: 5.85,
     image: "GREEN'R Multi - 1L.webp",
+    eco: true,
   },
   {
     name: "Green'R Multi 5L",
@@ -2896,6 +2902,7 @@ const allProductsCatalog = [
     category: "All purpose cleaners",
     price: 18.85,
     image: "GREEN'R Multi - 5L.webp",
+    eco: true,
   },
   {
     name: "Lufra San Multi Lemon 5L",
@@ -3110,7 +3117,8 @@ function generateAllProducts() {
   const seenCodes = new Set()
 
   allProducts.forEach((product) => {
-    if (!seenCodes.has(product.code)) {
+    // Products with no code yet can't be deduplicated by code - keep every one of them
+    if (product.code === "" || !seenCodes.has(product.code)) {
       seenCodes.add(product.code)
       uniqueProducts.push(product)
     }
@@ -3125,6 +3133,7 @@ function initializeEventListeners() {
   document.getElementById("tab-by-industry").addEventListener("click", () => switchTab("by-industry"))
   document.getElementById("tab-all-products").addEventListener("click", () => switchTab("all-products"))
   document.getElementById("tab-paper-products").addEventListener("click", () => switchTab("paper-products"))
+  document.getElementById("tab-eco-products").addEventListener("click", () => switchTab("eco-products"))
 
   // Industry tabs
   document.querySelectorAll(".industry-tab").forEach((tab) => {
@@ -3160,6 +3169,10 @@ function switchTab(tabName) {
   if (tabName === "paper-products") {
     loadPaperProducts()
   }
+
+  if (tabName === "eco-products") {
+    loadEcoProducts()
+  }
 }
 
 const PAPER_PRODUCT_CATEGORIES = new Set([
@@ -3178,6 +3191,15 @@ function loadPaperProducts() {
 
   const container = document.getElementById("paper-products-grid")
   container.innerHTML = paperProducts.map((product) => createProductCard(product)).join("")
+}
+
+function loadEcoProducts() {
+  const ecoProducts = allProducts
+    .filter((product) => product.eco === true)
+    .sort((a, b) => a.name.localeCompare(b.name))
+
+  const container = document.getElementById("eco-products-grid")
+  container.innerHTML = ecoProducts.map((product) => createProductCard(product)).join("")
 }
 
 function switchIndustry(industry) {
