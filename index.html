@@ -17,31 +17,31 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body class="min-h-screen bg-background text-foreground">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-primary border-b-4 border-brand-yellow">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
-                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-xl font-semibold tracking-tight hover:text-primary transition-colors">
+                <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="text-xl font-extrabold tracking-tight text-primary-foreground hover:text-brand-yellow transition-colors">
                     Clean and Supply Southwest LTD
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
-                    <a href="products.html" class="text-sm font-medium hover:text-primary transition-colors">Products</a>
-                    <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
-                    <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                    <a href="#about" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Products</a>
+                    <a href="#services" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Services</a>
+                    <a href="#contact" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Contact</a>
                 </nav>
 
-                <button class="md:hidden" id="mobile-menu-btn">
+                <button class="md:hidden text-primary-foreground" id="mobile-menu-btn">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
 
-            <nav class="md:hidden mt-4 pb-4 border-t border-border pt-4 hidden" id="mobile-menu">
+            <nav class="md:hidden mt-4 pb-4 border-t border-primary-foreground/20 pt-4 hidden" id="mobile-menu">
                 <div class="flex flex-col space-y-4">
-                    <a href="#about" class="text-sm font-medium hover:text-primary transition-colors">About</a>
-                    <a href="products.html" class="text-sm font-medium hover:text-primary transition-colors">Products</a>
-                    <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
-                    <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+                    <a href="#about" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">About</a>
+                    <a href="products.html" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Products</a>
+                    <a href="#services" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Services</a>
+                    <a href="#contact" class="text-sm font-bold text-primary-foreground hover:text-brand-yellow transition-colors">Contact</a>
                 </div>
             </nav>
         </div>
@@ -60,7 +60,10 @@
 
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-5xl md:text-7xl font-light tracking-tight text-balance mb-8 fade-in-up">
+                    <span class="inline-block bg-brand-yellow text-black font-extrabold text-sm uppercase tracking-wide px-4 py-1.5 rounded-full mb-6 fade-in-up shadow-md">
+                        Wholesale Prices - Trade Only
+                    </span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-balance mb-8 fade-in-up">
                         Professional cleaning solutions for your business
                     </h1>
                     <p class="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-pretty fade-in-up animate-delay-200">
@@ -69,24 +72,24 @@
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-delay-400">
-                        <button class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8" onclick="window.location.href='products.html'">
+                        <button class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 shadow-lg" onclick="window.location.href='products.html'">
                             View Our Products
                             <i data-lucide="arrow-right" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"></i>
                         </button>
-                        <a href="tel:+441225774771" class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-border bg-background hover:bg-muted h-11 px-8">
+                        <a href="tel:+441225774771" class="group inline-flex items-center justify-center whitespace-nowrap rounded-md text-base font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border-2 border-brand-yellow bg-brand-yellow text-black hover:bg-brand-yellow/90 h-12 px-8 shadow-lg">
                             <i data-lucide="phone" class="mr-2 h-4 w-4"></i>
                             Call 01225 774771
                         </a>
                     </div>
 
-                    <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mt-10 text-xs font-medium uppercase tracking-wide text-muted-foreground fade-in-up animate-delay-500">
-                        <span>Serving</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">Trowbridge</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">Bath</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">Bristol</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">Chippenham</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">Bridgwater</span>
-                        <span class="px-2.5 py-1 rounded-full border border-border">+ more</span>
+                    <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mt-10 text-xs font-bold uppercase tracking-wide fade-in-up animate-delay-500">
+                        <span class="text-muted-foreground">Serving</span>
+                        <span class="px-2.5 py-1 rounded-full bg-primary text-primary-foreground">Trowbridge</span>
+                        <span class="px-2.5 py-1 rounded-full bg-primary text-primary-foreground">Bath</span>
+                        <span class="px-2.5 py-1 rounded-full bg-primary text-primary-foreground">Bristol</span>
+                        <span class="px-2.5 py-1 rounded-full bg-primary text-primary-foreground">Chippenham</span>
+                        <span class="px-2.5 py-1 rounded-full bg-primary text-primary-foreground">Bridgwater</span>
+                        <span class="px-2.5 py-1 rounded-full bg-brand-yellow text-black">+ more</span>
                     </div>
                 </div>
             </div>
@@ -96,7 +99,7 @@
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 text-balance fade-in-up">
                             About Clean and Supply Southwest LTD
                         </h2>
                         <p class="text-lg text-muted-foreground text-pretty fade-in-up animate-delay-200">
@@ -106,21 +109,21 @@
 
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div class="fade-in-left">
-                            <h3 class="text-2xl font-medium mb-6">Our Commitment</h3>
+                            <h3 class="text-2xl font-extrabold mb-6">Our Commitment</h3>
                             <p class="text-muted-foreground leading-relaxed mb-6">
                                 We specialise in providing pure, concentrated cleaning chemicals that deliver exceptional results while being cost-effective for your business operations.
                             </p>
                             <ul class="space-y-4">
                                 <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5"></i>
                                     <span class="text-muted-foreground leading-relaxed">Extensive range covering everything from industrial degreasers to specialised sanitisers</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5"></i>
                                     <span class="text-muted-foreground leading-relaxed">Tailored solutions for the unique needs of different business sectors</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-teal flex-shrink-0 mt-0.5"></i>
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5"></i>
                                     <span class="text-muted-foreground leading-relaxed">Transparent, upfront pricing with no hidden costs</span>
                                 </li>
                             </ul>
@@ -140,7 +143,7 @@
         <section id="services" class="py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 text-balance fade-in-up">
                         Our Services
                     </h2>
                     <p class="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty fade-in-up animate-delay-200">
@@ -151,10 +154,10 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="droplets" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="droplets" class="w-6 h-6 text-primary-foreground"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Pure Chemicals</h3>
+                            <h3 class="text-xl font-bold mb-3">Pure Chemicals</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 High-quality, concentrated cleaning chemicals that provide superior cleaning power and value for money.
                             </p>
@@ -163,10 +166,10 @@
 
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-100">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="truck" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="truck" class="w-6 h-6 text-black"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Reliable Delivery</h3>
+                            <h3 class="text-xl font-bold mb-3">Reliable Delivery</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 Fast and dependable delivery service across Wiltshire, Somerset, and the wider West Country to keep your operations running smoothly.
                             </p>
@@ -175,10 +178,10 @@
 
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-200">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-primary-foreground"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Expert Support</h3>
+                            <h3 class="text-xl font-bold mb-3">Expert Support</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 Professional guidance and support to help you choose the right products for your specific cleaning needs.
                             </p>
@@ -187,10 +190,10 @@
 
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-300">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-black"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Safety First</h3>
+                            <h3 class="text-xl font-bold mb-3">Safety First</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 All our products meet strict safety standards and come with comprehensive safety data sheets.
                             </p>
@@ -199,10 +202,10 @@
 
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-400">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="calculator" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="calculator" class="w-6 h-6 text-primary-foreground"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Custom Quotes</h3>
+                            <h3 class="text-xl font-bold mb-3">Custom Quotes</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 Personalised pricing based on your specific requirements and volume needs.
                             </p>
@@ -211,10 +214,10 @@
 
                     <div class="group p-8 rounded-lg border border-border hover:shadow-lg transition-shadow duration-300 card-hover scale-in animate-delay-500">
                         <div class="mb-6">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                                <i data-lucide="recycle" class="w-6 h-6 text-primary"></i>
+                            <div class="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="recycle" class="w-6 h-6 text-black"></i>
                             </div>
-                            <h3 class="text-xl font-medium mb-3">Eco-Friendly Options</h3>
+                            <h3 class="text-xl font-bold mb-3">Eco-Friendly Options</h3>
                             <p class="text-muted-foreground leading-relaxed">
                                 Environmentally responsible cleaning solutions that don't compromise on effectiveness.
                             </p>
@@ -228,7 +231,7 @@
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-balance fade-in-up">
+                        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 text-balance fade-in-up">
                             Get in Touch
                         </h2>
                         <p class="text-lg text-muted-foreground text-pretty fade-in-up animate-delay-200">
@@ -239,11 +242,11 @@
                     <div class="grid md:grid-cols-2 gap-12">
                         <div class="space-y-8 fade-in-left">
                             <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="phone" class="w-6 h-6 text-primary"></i>
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-6 h-6 text-primary-foreground"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-medium mb-2">Phone</h3>
+                                    <h3 class="text-lg font-bold mb-2">Phone</h3>
                                     <p class="text-muted-foreground">Call us for immediate assistance</p>
                                     <a href="tel:+441225774771" class="text-primary hover:underline font-medium">
                                         01225774771
@@ -252,11 +255,11 @@
                             </div>
 
                             <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+                                <div class="w-12 h-12 bg-brand-yellow rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="w-6 h-6 text-black"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-medium mb-2">Email</h3>
+                                    <h3 class="text-lg font-bold mb-2">Email</h3>
                                     <p class="text-muted-foreground">Send us your requirements</p>
                                     <a href="mailto:sales@cleanandsupply.co.uk" class="text-primary hover:underline font-medium">
                                         sales@cleanandsupply.co.uk
@@ -265,11 +268,11 @@
                             </div>
 
                             <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i data-lucide="map-pin" class="w-6 h-6 text-primary"></i>
+                                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-primary-foreground"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-medium mb-2">Service Area</h3>
+                                    <h3 class="text-lg font-bold mb-2">Service Area</h3>
                                     <p class="text-muted-foreground">
                                         Trowbridge, Wiltshire &amp; within 50 miles<br />
                                         Including Amesbury, Andover, Bath, Bradford-on-Avon, Brean, Bridgwater, Bristol, Bruton, Burnham-on-Sea, Calne, Chard, Cheddar, Chippenham, Chipping Sodbury, Clevedon, Corsham, and other major towns in the area
@@ -283,39 +286,39 @@
         </section>
     </main>
 
-    <footer class="bg-muted py-12">
+    <footer class="bg-foreground text-background py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-2">
-                    <h3 class="text-lg font-semibold mb-4">Clean and Supply Southwest LTD</h3>
-                    <p class="text-muted-foreground mb-4 leading-relaxed">
+                    <h3 class="text-lg font-extrabold mb-4 text-brand-yellow">Clean and Supply Southwest LTD</h3>
+                    <p class="text-background/70 mb-4 leading-relaxed">
                         Your trusted partner for professional cleaning supplies and chemicals across Wiltshire, Somerset, and the wider West Country.
                         Quality products, reliable service, competitive prices.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="tel:+441225774771" class="text-muted-foreground hover:text-primary transition-colors">
+                        <a href="tel:+441225774771" class="text-background/70 hover:text-brand-yellow transition-colors">
                             <i data-lucide="phone" class="w-5 h-5"></i>
                         </a>
-                        <a href="mailto:sales@cleanandsupply.co.uk" class="text-muted-foreground hover:text-primary transition-colors">
+                        <a href="mailto:sales@cleanandsupply.co.uk" class="text-background/70 hover:text-brand-yellow transition-colors">
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </a>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="font-medium mb-4">Quick Links</h4>
+                    <h4 class="font-extrabold mb-4 text-brand-yellow">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
-                        <li><a href="products.html" class="text-muted-foreground hover:text-primary transition-colors">Products</a></li>
-                        <li><a href="#services" class="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-                        <li><a href="#contact" class="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#about" class="text-background/70 hover:text-brand-yellow transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-background/70 hover:text-brand-yellow transition-colors">Products</a></li>
+                        <li><a href="#services" class="text-background/70 hover:text-brand-yellow transition-colors">Services</a></li>
+                        <li><a href="#contact" class="text-background/70 hover:text-brand-yellow transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="font-medium mb-4">Service Areas</h4>
-                    <p class="text-sm text-muted-foreground mb-2">Within 50 miles of Trowbridge, Wiltshire</p>
-                    <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                    <h4 class="font-extrabold mb-4 text-brand-yellow">Service Areas</h4>
+                    <p class="text-sm text-background/70 mb-2">Within 50 miles of Trowbridge, Wiltshire</p>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-background/70">
                         <span>Trowbridge</span>
                         <span>Amesbury</span>
                         <span>Andover</span>
@@ -338,8 +341,8 @@
                 </div>
             </div>
 
-            <div class="border-t border-border mt-8 pt-8 text-center">
-                <p class="text-muted-foreground">
+            <div class="border-t border-background/20 mt-8 pt-8 text-center">
+                <p class="text-background/70">
                     © 2026 Clean and Supply Southwest LTD. All rights reserved.
                 </p>
             </div>
