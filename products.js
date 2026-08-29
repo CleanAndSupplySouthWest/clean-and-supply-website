@@ -407,14 +407,7 @@ const productsByBusinessType = {
         price: 17.73,
         image: "Ultra Xtreme - 5L.webp",
       },
-      {
-        name: "Antiviral Wipes Hycolin",
-        description: "Antiviral Wipes",
-        code: "ANTIWIPES",
-        category: "Covid",
-        price: 2.78,
-        image: "antiviral-wipes-hycolin.webp",
-      },
+      
       {
         name: "Larox - 5L",
         description: "Hygienic Hand Soap, Antibacterial",
@@ -597,14 +590,7 @@ const productsByBusinessType = {
         price: 5.96,
         image: "wet-floor-sign-flat.webp",
       },
-      {
-        name: "Banana Cone Wet floor sign",
-        description: "Wet floor sign",
-        code: "104557",
-        category: "Buckets and Signs",
-        price: 28.4,
-        image: "banana-cone-wet-floor-sign.webp",
-      },
+      
     ],
   },
 }
@@ -844,22 +830,8 @@ const allProductsCatalog = [
     price: 6.17,
     image: "20l-bottle-cap-tap.webp",
   },
-  {
-    name: "300ml bottle with pump top (Thin)",
-    description: "Thin 300ml empty bottle with pump top",
-    code: "BOT300B",
-    category: "Bottles and Heads",
-    price: 1.29,
-    image: "300ml-bottle-pump-top.webp",
-  },
-  {
-    name: "500ml Bottle (Round) with cap",
-    description: "500ml Bottle",
-    code: "BOT300",
-    category: "Bottles and Heads",
-    price: 0.92,
-    image: "500ml-bottle-round.webp",
-  },
+  
+  
   {
     name: "5L Bottle Cap Tap",
     description: "Bottle Tap",
@@ -868,23 +840,9 @@ const allProductsCatalog = [
     price: 5.56,
     image: "5l-bottle-cap-tap.webp",
   },
-  {
-    name: "60ml Measuring Cup",
-    description: "Measuring Cup",
-    code: "MEASURINGCUP",
-    category: "Bottles and Heads",
-    price: 0.69,
-    image: "60ml-measuring-cup.webp",
-  },
   
-  {
-    name: "Bottle Cap (500ml round bottle top)",
-    description: "Bottle Cap",
-    code: "BOTCAP",
-    category: "Bottles and Heads",
-    price: 0.3,
-    image: "bottle-cap-500ml.webp",
-  },
+  
+  
   
   {
     name: "Pelican Pump - 5L Cleenol",
@@ -1132,14 +1090,7 @@ const allProductsCatalog = [
     price: 2.47,
     image: "deck-scrub-blue.webp",
   },
-  {
-    name: "Desktop Dustpan and Brush",
-    description: "Desktop Dustpan and Brush",
-    code: "DSKTPPAN",
-    category: "Brushware",
-    price: 1,
-    image: "desktop-dustpan-brush.webp",
-  },
+  
   {
     name: "Dustpan & Brush (Blue)",
     description: "Dustpan & Brush",
@@ -1310,14 +1261,7 @@ const allProductsCatalog = [
   },
 
   // Buckets and Signs
-  {
-    name: "Banana Cone Wet floor sign",
-    description: "Wet floor sign",
-    code: "104557",
-    category: "Buckets and Signs",
-    price: 28.4,
-    image: "banana-cone-wet-floor-sign.webp",
-  },
+  
   {
     name: "Bucket Speedy & Wringer 20L BLUE",
     description: "Bucket Speedy & Wringer 20L BLUE",
@@ -1350,38 +1294,10 @@ const allProductsCatalog = [
     price: 39.9,
     image: "bucket-speedy-wringer-yellow.webp",
   },
-  {
-    name: "Bucket, Round 9L Blue",
-    description: "Bucket - Round 9L Blue",
-    code: "755B",
-    category: "Buckets and Signs",
-    price: 2.24,
-    image: "bucket-round-9l-blue.webp",
-  },
-  {
-    name: "Bucket, Round 9L Green",
-    description: "Bucket - Round 9L Green",
-    code: "755G",
-    category: "Buckets and Signs",
-    price: 2.24,
-    image: "bucket-round-9l-green.webp",
-  },
-  {
-    name: "Bucket, Round 9L Red",
-    description: "Bucket - Round 9L Red",
-    code: "755R",
-    category: "Buckets and Signs",
-    price: 2.24,
-    image: "bucket-round-9l-red.webp",
-  },
-  {
-    name: "Bucket, Round 9L Yellow",
-    description: "Bucket - Round 9L Yellow",
-    code: "755Y",
-    category: "Buckets and Signs",
-    price: 2.24,
-    image: "bucket-round-9l-yellow.webp",
-  },
+  
+  
+  
+  
   {
     name: "Eco Wet Floor Sign",
     description: "Wet Floor Folding Sign, Recycled",
@@ -1540,14 +1456,7 @@ const allProductsCatalog = [
     price: 9.89,
     image: "antibacterial-wipes-blue.webp",
   },
-  {
-    name: 'Baking Paper (12")- Cutterbox 30cm x 75m',
-    description: 'Baking Parchment Silicone (12")- Cutterbox 30cm x 75m',
-    code: "13244B",
-    category: "Catering Essentials",
-    price: 9.16,
-    image: "baking-paper-12-cutterbox.webp",
-  },
+  
   {
     name: 'Baking Paper (18") - Cutterbox x75m',
     description: 'Baking Parchment 18" x 75m Cutterbox',
@@ -2085,14 +1994,7 @@ const allProductsCatalog = [
   },
 
   // Hand Towels
-  {
-    name: "Autocut - Hand Towel, Roll, 1 Ply White",
-    description: "White Autocut hand towels",
-    code: "PHS101",
-    category: "Hand Towels",
-    price: 23.02,
-    image: "autocut-hand-towel-1ply.webp",
-  },
+  
   {
     name: "Autocut Hand Towel Rolls, 2 Ply",
     description: "White Autocut 2 Ply Hand Towel Rolls x 6",
@@ -2161,14 +2063,7 @@ const allProductsCatalog = [
     price: 11.38,
     image: "Bio Dox - 5L.webp",
   },
-  {
-    name: "Citrus Hand Cleanser 500ml",
-    description: "Citrus Antibacterial Liquid Soap 500ml",
-    code: "77234",
-    category: "Soaps",
-    price: 3.26,
-    image: "citrus-hand-cleanser.webp",
-  },
+  
   {
     name: "Larox - 5L",
     description: "Hygienic Hand Soap, Antibacterial",
@@ -2177,14 +2072,7 @@ const allProductsCatalog = [
     price: 11.26,
     image: "Larox - 5L.webp",
   },
-  {
-    name: "Luxury Liquid Soap 500ml",
-    description: "Green hand soap",
-    code: "77037",
-    category: "Soaps",
-    price: 2.63,
-    image: "luxury-liquid-soap.webp",
-  },
+  
   {
     name: "Savon Blanc - 5L",
     description: "Luxury Hand Soap",
@@ -2236,22 +2124,8 @@ const allProductsCatalog = [
   },
 
   // Toilet Rolls
-  {
-    name: "Bliss 2-Ply Soft Toilet Rolls",
-    description: "10x4 rolls",
-    code: "BDQ2PLY4PK",
-    category: "Toilet Rolls",
-    price: 16.15,
-    image: "bliss-2ply-toilet-rolls.webp",
-  },
-  {
-    name: "Bliss 3-Ply Toilet Roll",
-    description: "10x4 rolls",
-    code: "BTQ3PLY4PK",
-    category: "Toilet Rolls",
-    price: 19.67,
-    image: "bliss-3ply-toilet-rolls.webp",
-  },
+  
+  
   {
     name: "Bulk Pack Toilet Tissue",
     description: "White, 2 ply, 10.2 x 19.5cm, 36 x 250 sheet packs",
@@ -2419,14 +2293,7 @@ const allProductsCatalog = [
   
   
   
-  {
-    name: "Disinfectant Surface Wipes",
-    description: "Lemon Fresh Wipes x 60",
-    code: "Disinfectwipes",
-    category: "Wipes",
-    price: 2.48,
-    image: "disinfectant-surface-wipes.webp",
-  },
+  
   
 
   // Sacks
@@ -2454,22 +2321,8 @@ const allProductsCatalog = [
     price: 21.72,
     image: "clear-sacks-medium.webp",
   },
-  {
-    name: "HD Pedal Bin Liners",
-    description: "Pedal Bin Liners, Heavy Duty (box 1000) 280x425x425",
-    code: "HDPEDAL",
-    category: "Sacks",
-    price: 16.8,
-    image: "hd-pedal-bin-liners.webp",
-  },
-  {
-    name: "HD Swing Bin Liners",
-    description: "Swing Bin Liners, Heavy Duty (box 1000) 300x550x700m",
-    code: "HDSWING 7533",
-    category: "Sacks",
-    price: 16.9,
-    image: "hd-swing-bin-liners.webp",
-  },
+  
+  
   {
     name: "Mammoth Wheelie Bin Liners",
     description: "Black Wheelie Bin Liners (100, 760x1165x1370mm)",
@@ -2611,22 +2464,8 @@ const allProductsCatalog = [
   },
 
   // Covid
-  {
-    name: "Antiviral Spray Can 300ml",
-    description: "Antiviral Spray",
-    code: "V11",
-    category: "Covid",
-    price: 2.45,
-    image: "antiviral-spray-can.webp",
-  },
-  {
-    name: "Antiviral Wipes Hycolin",
-    description: "Antiviral Wipes",
-    code: "ANTIWIPES",
-    category: "Covid",
-    price: 2.78,
-    image: "antiviral-wipes-hycolin.webp",
-  },
+  
+  
   
   {
     name: "PRO Type IIR Facemasks disposable",
@@ -2646,14 +2485,7 @@ const allProductsCatalog = [
   },
 
   // Laundry
-  {
-    name: "Ariel Laundry Tablets",
-    description: "Laundry Tablets",
-    code: "ARIELLLATAB",
-    category: "Laundry",
-    price: 18.25,
-    image: "ariel-laundry-tablets.webp",
-  },
+  
   {
     name: "CrystalBrite Laundry Powder - Bio -10kg",
     description: "Laundry Powder - Bio - 10kg 100 washes",
@@ -2778,14 +2610,7 @@ const allProductsCatalog = [
     price: 4.07,
     image: "Drastik - 750ml.webp",
   },
-  {
-    name: "Lemon Cream Cleaner - 300ml",
-    description: "Cream Cleaner",
-    code: "431",
-    category: "Interior- All purpose/Multi-purpose",
-    price: 1.6,
-    image: "lemon-cream-cleaner.webp",
-  },
+  
   {
     name: "Spirit - 5L",
     description: "Fragrant Multi-Surface Cleaner",
